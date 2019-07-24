@@ -17,7 +17,7 @@ jobs:
     displayName: 'Run Pester tests (individual .ps1 files)'
     inputs:
       targetType: Inline
-      script: .\.pipelines\build.ps1 -Test -BasePath '.\src'
+      script: .\.pipelines\build.ps1 -Test -BasePath '.'
 
   - task: PowerShell@2
     displayName: 'Compile module'
@@ -29,7 +29,7 @@ jobs:
     displayName: 'Run Pester tests (compiled .psm1)'
     inputs:
       targetType: Inline
-      script: .\.pipelines\build.ps1 -Test -BasePath '.\src'
+      script: .\.pipelines\build.ps1 -Test -BasePath '.'
 
   - task: PublishTestResults@2
     displayName: 'Publish test results'
