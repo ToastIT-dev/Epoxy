@@ -1,0 +1,4 @@
+
+if ((Get-TypeData -TypeName Epoxy.*).Count -eq 0) {
+    Initialize-EpoxyTypeData
+}
